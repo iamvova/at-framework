@@ -1,4 +1,5 @@
 .idea
 driver
 target
+allure-results
 src/main/resources/application.properties
