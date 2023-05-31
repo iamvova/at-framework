@@ -4,13 +4,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ui.wrapper.Decorator;
+import ui.wrapper.Element;
+
 import static drivers.Driver.driver;
 
 public class HomePage {
 
 
     @FindBy(xpath = "//a[@href='/login' and contains(@class,'HeaderMenu-link--sign-in') and normalize-space()='Sign in']")
-    private WebElement sigInBtn;
+    private Element sigInBtn;
     public static final String URL = "https://github.com/";
     public HomePage(){
         PageFactory.initElements(new Decorator(driver), this);
@@ -20,9 +22,8 @@ public class HomePage {
 
     }
 
-    public LoginPage goToLoginPage() throws InterruptedException {
-        Thread.sleep(1000);
-        sigInBtn.click();
+    public LoginPage goToLoginPage()  {
+        sigInBtn.waitSomeSecond().click();
         return new LoginPage();
     }
     public GoToRepoPage goToRepoPage() {

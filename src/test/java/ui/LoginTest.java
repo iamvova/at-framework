@@ -2,10 +2,7 @@ package ui;
 
 import allure.AllureListener;
 import drivers.Driver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import ui.bo.GoToRepo;
 import ui.bo.Login;
 import ui.bo.BioStatus;
@@ -23,6 +20,7 @@ public class LoginTest {
 //        driver = new FirefoxDriver();
 //    }
     @Test
+
     void endToEndTest() throws InterruptedException, IOException {
         Login loginBO = new Login();
         loginBO.checkLoginUser().loginUser();

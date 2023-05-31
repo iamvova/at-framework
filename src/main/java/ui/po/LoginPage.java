@@ -4,51 +4,49 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ui.wrapper.Decorator;
+import ui.wrapper.Element;
 import static drivers.Driver.driver;
 public class LoginPage {
     @FindBy(id = "login_field")
-    private WebElement loginField;
+    private Element loginField;
 
     @FindBy(id = "password")
-    private WebElement passwordField;
+    private Element passwordField;
 
     @FindBy(className = "js-sign-in-button")
-    private WebElement btnSignIn;
+    private Element btnSignIn;
 
     @FindBy(className = "avatar-small")
-    private WebElement avatarSmall;
+    private Element avatarSmall;
     @FindBy(className = "css-truncate-target")
-    private WebElement checkName;
+    private Element checkName;
 
     public LoginPage() {
         PageFactory.initElements(new Decorator(driver), this);
     }
 
-    public LoginPage inputLogin(String login) throws InterruptedException {
-        Thread.sleep(1000);
-        loginField.sendKeys(login);
+    public LoginPage inputLogin(String login){
+        loginField.waitSomeSecond().sendKeys(login);
         return this;
     }
 
     public LoginPage inputPassword(String pass) {
-        passwordField.sendKeys(pass);
+        passwordField.getWebElement().sendKeys(pass);
         return this;
     }
 
     public LoginPage login() {
-        btnSignIn.click();
+        btnSignIn.getWebElement().click();
         return this;
     }
 
-    public LoginPage clickOnAvatar() throws InterruptedException {
-        Thread.sleep(2000);
-        avatarSmall.click();
+    public LoginPage clickOnAvatar(){
+        avatarSmall.waitSomeSecond().click();
         return this;
     }
 
-    public String checkName() throws InterruptedException {
-        Thread.sleep(1000);
-        return checkName.getText();
+    public String checkName(){
+        return checkName.waitSomeSecond().getText();
     }
 
 
