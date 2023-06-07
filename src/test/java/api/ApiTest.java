@@ -17,7 +17,7 @@ import static io.restassured.RestAssured.given;
 public class ApiTest {
     private String bodyApi = "https://api.github.com/";
     Properties properties = new Properties();
-    String apiToken = "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";
+    String apiToken = "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";
     String username = properties.getProperty("LOGIN");
     String mainRepoName = "at-test";
     String mainRepoName1 = "at-test1";
