@@ -1,0 +1,6 @@
+1686296301139,2771,Post,201,Created,API 1-1,text,true,,6911,333,1,1,https://api.github.com/user/repos,2769,0,1813
+1686296303913,312,Put,200,OK,API 1-1,text,true,,6948,303,1,1,https://api.github.com/repos/vova-at/at-test1,309,0,0
+1686296304225,420,Delete,204,No Content,API 1-1,,true,,1343,259,1,1,https://api.github.com/repos/vova-at/at-test1,0,0,0
+1686296304646,231,GET,200,OK,API 1-1,text,true,,6363,225,1,1,https://api.github.com/user/repos,231,0,0
+1686296315256,220,GetById,200,OK,API 1-1,text,true,,6964,237,1,1,https://api.github.com/repositories/651160179,219,0,0
+1686296315482,1,Debug Sampler,200,OK,API 1-1,text,true,,396,0,1,1,null,0,0,0
